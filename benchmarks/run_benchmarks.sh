@@ -21,19 +21,22 @@ make
 ./benchmark $ARCH
 cd ../../benchmarks
 
-# 编译并运行Rust实现
-echo "编译Rust实现..."
-cd ../implementations/rust
-cargo build --release
-./target/release/benchmark $ARCH
-cd ../../benchmarks
+# 暂时跳过Rust和Go实现，因为没有安装相应的编译器
+echo "跳过Rust和Go实现..."
 
-# 编译并运行Go实现
-echo "编译Go实现..."
-cd ../implementations/go
-go build -o benchmark
-./benchmark $ARCH
-cd ../../benchmarks
+# # 编译并运行Rust实现
+# echo "编译Rust实现..."
+# cd ../implementations/rust
+# cargo build --release
+# ./target/release/benchmark $ARCH
+# cd ../../benchmarks
+#
+# # 编译并运行Go实现
+# echo "编译Go实现..."
+# cd ../implementations/go
+# go build -o benchmark
+# ./benchmark $ARCH
+# cd ../../benchmarks
 
 echo "所有基准测试完成！"
 
